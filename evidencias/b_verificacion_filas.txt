@@ -1,0 +1,4 @@
+Actividad B - verificacion de tres filas contra la tabla de la pagina (leida del DOM, columnas: lugar | ... | entidad | superficie | % | poblacion 2020 | densidad 2015 | ...)
+Jalisco          | 80 295 | 4,0 | 8 348 151  | 100   -> CSV: Jalisco,80295,8348151,100
+Yucatan          | 39 524 | 2,0 | 2 320 898  | 53    -> CSV: Yucatán,39524,2320898,53
+Ciudad de Mexico | 1495   | 0,1 | 9 209 944  | 5966  -> CSV: Ciudad de México,1495,9209944,5966

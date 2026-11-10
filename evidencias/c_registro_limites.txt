@@ -1,0 +1,11 @@
+Actividad C - respuestas textuales del servidor filesystem (Claude Code, 10 nov 2026)
+
+1) list_allowed_directories
+   -> Allowed directories:
+      C:\Users\marqu\OneDrive\Desktop\practica1-mcp
+
+2) read_text_file  path: C:/Windows/win.ini
+   -> Access denied - path outside allowed directories: C:\Windows\win.ini not in C:\Users\marqu\OneDrive\Desktop\practica1-mcp
+
+3) list_directory  path: C:\Users\marqu\OneDrive\Desktop   (directorio padre)
+   -> Access denied - path outside allowed directories: C:\Users\marqu\OneDrive\Desktop not in C:\Users\marqu\OneDrive\Desktop\practica1-mcp
