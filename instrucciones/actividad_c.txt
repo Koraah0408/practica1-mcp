@@ -1,0 +1,8 @@
+Usa unicamente las herramientas del servidor MCP filesystem.
+1) Llama a list_allowed_directories.
+2) Intenta leer un archivo que este fuera de la carpeta de la
+practica (en Windows: C:/Windows/win.ini; en macOS o Linux:
+/etc/hosts).
+3) Intenta listar el directorio padre de tu carpeta permitida.
+No uses ninguna otra via si falla. Reporta textualmente que
+respondio el servidor en cada intento.

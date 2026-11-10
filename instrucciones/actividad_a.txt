@@ -1,0 +1,9 @@
+Usa unicamente las herramientas del servidor MCP filesystem.
+1) Lista el contenido de la carpeta datos.
+2) Lee datos/calificaciones.csv.
+3) Calcula el promedio final de cada alumno (media de los tres
+parciales, con dos decimales) e indica si aprueba (promedio >= 6.0).
+4) Escribe el resultado en salida/reporte.md como una tabla Markdown
+ordenada de mayor a menor promedio, y al final agrega el promedio
+del grupo.
+Responde con un resumen breve de lo que hiciste.

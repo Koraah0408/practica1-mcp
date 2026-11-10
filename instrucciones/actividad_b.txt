@@ -1,0 +1,13 @@
+Usa las herramientas MCP de playwright y filesystem.
+1) Abre en el navegador la pagina
+https://es.wikipedia.org/?curid=5897912
+2) Localiza la tabla principal con las 32 entidades federativas y
+extrae, para cada una: entidad, superficie en km2, poblacion y
+densidad (hab/km2).
+3) Guarda los datos en salida/entidades.csv con los encabezados
+entidad,superficie_km2,poblacion,densidad_hab_km2, con numeros
+sin separadores de miles y punto decimal.
+4) Toma una captura de pantalla de la pagina.
+5) Cierra el navegador.
+Responde con un resumen breve: cuantas filas guardaste y que año de
+poblacion usa la tabla.
