@@ -1,0 +1,160 @@
+# initialize -> servidor: {"name":"memory-server","version":"2.1.0"}, protocolo 2025-06-18
+# tools/list -> 9 herramientas: create_entities, create_relations, add_observations, delete_entities, delete_observations, delete_relations, read_graph, search_nodes, open_nodes
+
+## tools/call create_entities
+argumentos: {"entities":[{"name":"Practica 1 MCP","entityType":"proyecto","observations":["Conecta servidores MCP a un agente"]},{"name":"filesystem","entityType":"servidor MCP","observations":["Solo accede a la carpeta de la practica"]},{"name":"playwright","entityType":"servidor MCP","observations":["Controla un navegador"]}]}
+resultado: {
+ "content": [
+  {
+   "type": "text",
+   "text": "[\n  {\n    \"name\": \"Practica 1 MCP\",\n    \"entityType\": \"proyecto\",\n    \"observations\": [\n      \"Conecta servidores MCP a un agente\"\n    ]\n  },\n  {\n    \"name\": \"filesystem\",\n    \"entityType\": \"servidor MCP\",\n    \"observations\": [\n      \"Solo accede a la carpeta de la practica\"\n    ]\n  },\n  {\n    \"name\": \"playwright\",\n    \"entityType\": \"servidor MCP\",\n    \"observations\": [\n      \"Controla un navegador\"\n    ]\n  }\n]"
+  }
+ ],
+ "structuredContent": {
+  "entities": [
+   {
+    "name": "Practica 1 MCP",
+    "entityType": "proyecto",
+    "observations": [
+     "Conecta servidores MCP a un agente"
+    ]
+   },
+   {
+    "name": "filesystem",
+    "entityType": "servidor MCP",
+    "observations": [
+     "Solo accede a la carpeta de la practica"
+    ]
+   },
+   {
+    "name": "playwright",
+    "entityType": "servidor MCP",
+    "observations": [
+     "Controla un navegador"
+    ]
+   }
+  ]
+ }
+}
+
+## tools/call create_relations
+argumentos: {"relations":[{"from":"Practica 1 MCP","to":"filesystem","relationType":"usa"},{"from":"Practica 1 MCP","to":"playwright","relationType":"usa"}]}
+resultado: {
+ "content": [
+  {
+   "type": "text",
+   "text": "[\n  {\n    \"from\": \"Practica 1 MCP\",\n    \"to\": \"filesystem\",\n    \"relationType\": \"usa\"\n  },\n  {\n    \"from\": \"Practica 1 MCP\",\n    \"to\": \"playwright\",\n    \"relationType\": \"usa\"\n  }\n]"
+  }
+ ],
+ "structuredContent": {
+  "relations": [
+   {
+    "from": "Practica 1 MCP",
+    "to": "filesystem",
+    "relationType": "usa"
+   },
+   {
+    "from": "Practica 1 MCP",
+    "to": "playwright",
+    "relationType": "usa"
+   }
+  ]
+ }
+}
+
+## tools/call add_observations
+argumentos: {"observations":[{"entityName":"filesystem","contents":["Rechaza rutas fuera de la carpeta permitida (Access denied)"]}]}
+resultado: {
+ "content": [
+  {
+   "type": "text",
+   "text": "[\n  {\n    \"entityName\": \"filesystem\",\n    \"addedObservations\": [\n      \"Rechaza rutas fuera de la carpeta permitida (Access denied)\"\n    ]\n  }\n]"
+  }
+ ],
+ "structuredContent": {
+  "results": [
+   {
+    "entityName": "filesystem",
+    "addedObservations": [
+     "Rechaza rutas fuera de la carpeta permitida (Access denied)"
+    ]
+   }
+  ]
+ }
+}
+
+## tools/call read_graph
+argumentos: {}
+resultado: {
+ "content": [
+  {
+   "type": "text",
+   "text": "{\n  \"entities\": [\n    {\n      \"name\": \"Practica 1 MCP\",\n      \"entityType\": \"proyecto\",\n      \"observations\": [\n        \"Conecta servidores MCP a un agente\"\n      ]\n    },\n    {\n      \"name\": \"filesystem\",\n      \"entityType\": \"servidor MCP\",\n      \"observations\": [\n        \"Solo accede a la carpeta de la practica\",\n        \"Rechaza rutas fuera de la carpeta permitida (Access denied)\"\n      ]\n    },\n    {\n      \"name\": \"playwright\",\n      \"entityType\": \"servidor MCP\",\n      \"observations\": [\n        \"Controla un navegador\"\n      ]\n    }\n  ],\n  \"relations\": [\n    {\n      \"from\": \"Practica 1 MCP\",\n      \"to\": \"filesystem\",\n      \"relationType\": \"usa\"\n    },\n    {\n      \"from\": \"Practica 1 MCP\",\n      \"to\": \"playwright\",\n      \"relationType\": \"usa\"\n    }\n  ]\n}"
+  }
+ ],
+ "structuredContent": {
+  "entities": [
+   {
+    "name": "Practica 1 MCP",
+    "entityType": "proyecto",
+    "observations": [
+     "Conecta servidores MCP a un agente"
+    ]
+   },
+   {
+    "name": "filesystem",
+    "entityType": "servidor MCP",
+    "observations": [
+     "Solo accede a la carpeta de la practica",
+     "Rechaza rutas fuera de la carpeta permitida (Access denied)"
+    ]
+   },
+   {
+    "name": "playwright",
+    "entityType": "servidor MCP",
+    "observations": [
+     "Controla un navegador"
+    ]
+   }
+  ],
+  "relations": [
+   {
+    "from": "Practica
+
+## tools/call search_nodes
+argumentos: {"query":"servidor"}
+resultado: {
+ "content": [
+  {
+   "type": "text",
+   "text": "{\n  \"entities\": [\n    {\n      \"name\": \"Practica 1 MCP\",\n      \"entityType\": \"proyecto\",\n      \"observations\": [\n        \"Conecta servidores MCP a un agente\"\n      ]\n    },\n    {\n      \"name\": \"filesystem\",\n      \"entityType\": \"servidor MCP\",\n      \"observations\": [\n        \"Solo accede a la carpeta de la practica\",\n        \"Rechaza rutas fuera de la carpeta permitida (Access denied)\"\n      ]\n    },\n    {\n      \"name\": \"playwright\",\n      \"entityType\": \"servidor MCP\",\n      \"observations\": [\n        \"Controla un navegador\"\n      ]\n    }\n  ],\n  \"relations\": [\n    {\n      \"from\": \"Practica 1 MCP\",\n      \"to\": \"filesystem\",\n      \"relationType\": \"usa\"\n    },\n    {\n      \"from\": \"Practica 1 MCP\",\n      \"to\": \"playwright\",\n      \"relationType\": \"usa\"\n    }\n  ]\n}"
+  }
+ ],
+ "structuredContent": {
+  "entities": [
+   {
+    "name": "Practica 1 MCP",
+    "entityType": "proyecto",
+    "observations": [
+     "Conecta servidores MCP a un agente"
+    ]
+   },
+   {
+    "name": "filesystem",
+    "entityType": "servidor MCP",
+    "observations": [
+     "Solo accede a la carpeta de la practica",
+     "Rechaza rutas fuera de la carpeta permitida (Access denied)"
+    ]
+   },
+   {
+    "name": "playwright",
+    "entityType": "servidor MCP",
+    "observations": [
+     "Controla un navegador"
+    ]
+   }
+  ],
+  "relations": [
+   {
+    "from": "Practica

@@ -1,0 +1,5 @@
+Usa unicamente las herramientas del servidor MCP memory.
+1) Crea las entidades "Practica 1 MCP" (tipo proyecto), "filesystem" y "playwright" (tipo servidor MCP).
+2) Crea relaciones: "Practica 1 MCP" usa "filesystem" y "Practica 1 MCP" usa "playwright".
+3) Agrega observaciones: filesystem solo accede a la carpeta de la practica; playwright controla un navegador.
+4) Consulta el grafo completo y buscar los nodos que contienen "servidor".
